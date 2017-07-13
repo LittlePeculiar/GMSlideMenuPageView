@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DzO-P4-L1u">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slide Menu View Controller-->
+        <scene sceneID="UKd-Bw-eCn">
+            <objects>
+                <viewController storyboardIdentifier="SlideVC" id="pPZ-YZ-D7b" customClass="GMSlideMenuViewController" customModule="GMSlideMenuPageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7gP-F6-LQH"/>
+                        <viewControllerLayoutGuide type="bottom" id="mnn-AH-fb0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xm4-rh-J7L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="phy-AZ-ePv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGe-ku-CDj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b08-dd-nbt">
+                                                <rect key="frame" x="20" y="8" width="335" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="PWo-lT-JJF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select from slider or segmented control to load different ViewControllers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YV-ci-Ky0">
+                                                <rect key="frame" x="20" y="39" width="335" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="b08-dd-nbt" secondAttribute="trailing" constant="20" id="0L6-2O-0if"/>
+                                            <constraint firstItem="6YV-ci-Ky0" firstAttribute="centerX" secondItem="YGe-ku-CDj" secondAttribute="centerX" id="Bba-0A-eeM"/>
+                                            <constraint firstItem="b08-dd-nbt" firstAttribute="top" secondItem="YGe-ku-CDj" secondAttribute="top" constant="8" id="Bd2-fL-OVm"/>
+                                            <constraint firstItem="6YV-ci-Ky0" firstAttribute="leading" secondItem="YGe-ku-CDj" secondAttribute="leading" constant="20" id="F09-bm-4x1"/>
+                                            <constraint firstItem="b08-dd-nbt" firstAttribute="leading" secondItem="YGe-ku-CDj" secondAttribute="leading" constant="20" id="GhG-Yg-R0O"/>
+                                            <constraint firstAttribute="height" constant="100" id="Ihg-MC-HXc"/>
+                                            <constraint firstAttribute="trailing" secondItem="6YV-ci-Ky0" secondAttribute="trailing" constant="20" id="LcV-Aw-PRA"/>
+                                            <constraint firstItem="6YV-ci-Ky0" firstAttribute="top" secondItem="b08-dd-nbt" secondAttribute="bottom" constant="10" id="cHy-2v-xoV"/>
+                                            <constraint firstItem="b08-dd-nbt" firstAttribute="centerX" secondItem="YGe-ku-CDj" secondAttribute="centerX" id="nYr-46-dfi"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB9-zu-erl" customClass="GMSlideMenuView" customModule="GMSlideMenuPageView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Xw4-9e-qYO"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="eeF-LG-6jU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LX-91-pyj">
+                                        <rect key="frame" x="0.0" y="150" width="375" height="50"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vKy-R4-5pg">
+                                                <rect key="frame" x="87.5" y="11" width="200" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="FyH-iF-wML"/>
+                                                    <constraint firstAttribute="height" constant="28" id="sCn-6R-ToZ"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Second"/>
+                                                    <segment title="Third"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="segmentControlDidChange:" destination="pPZ-YZ-D7b" eventType="valueChanged" id="BZw-x7-zLo"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="60W-Tm-FfC"/>
+                                            <constraint firstItem="vKy-R4-5pg" firstAttribute="centerX" secondItem="3LX-91-pyj" secondAttribute="centerX" id="KIa-gu-vTP"/>
+                                            <constraint firstItem="vKy-R4-5pg" firstAttribute="centerY" secondItem="3LX-91-pyj" secondAttribute="centerY" id="Thq-UO-z0a"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="pSo-qU-yIc"/>
+                                        </constraints>
+                                    </view>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6YE-AH-9Km">
+                                        <rect key="frame" x="0.0" y="200" width="375" height="403"/>
+                                        <connections>
+                                            <segue destination="tO9-hQ-CHD" kind="embed" id="r8K-2p-2mP"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FB9-zu-erl" firstAttribute="leading" secondItem="phy-AZ-ePv" secondAttribute="leading" id="1bJ-01-Elm"/>
+                                    <constraint firstAttribute="trailing" secondItem="FB9-zu-erl" secondAttribute="trailing" id="CX8-0V-KAX"/>
+                                    <constraint firstItem="3LX-91-pyj" firstAttribute="top" secondItem="FB9-zu-erl" secondAttribute="bottom" id="Hys-tl-94h"/>
+                                    <constraint firstItem="YGe-ku-CDj" firstAttribute="leading" secondItem="phy-AZ-ePv" secondAttribute="leading" id="IQ2-N0-oSO"/>
+                                    <constraint firstItem="6YE-AH-9Km" firstAttribute="top" secondItem="3LX-91-pyj" secondAttribute="bottom" id="Kgb-ID-kII"/>
+                                    <constraint firstAttribute="trailing" secondItem="YGe-ku-CDj" secondAttribute="trailing" id="NgL-2E-D9z"/>
+                                    <constraint firstItem="FB9-zu-erl" firstAttribute="top" secondItem="YGe-ku-CDj" secondAttribute="bottom" id="RJd-LY-puJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="6YE-AH-9Km" secondAttribute="trailing" id="RUN-Oa-hdu"/>
+                                    <constraint firstAttribute="trailing" secondItem="3LX-91-pyj" secondAttribute="trailing" id="Vif-WQ-blI"/>
+                                    <constraint firstItem="3LX-91-pyj" firstAttribute="leading" secondItem="phy-AZ-ePv" secondAttribute="leading" id="YYH-Lk-9Ht"/>
+                                    <constraint firstItem="6YE-AH-9Km" firstAttribute="leading" secondItem="phy-AZ-ePv" secondAttribute="leading" id="g8N-MX-utH"/>
+                                    <constraint firstAttribute="bottom" secondItem="6YE-AH-9Km" secondAttribute="bottom" id="pD8-xp-kai"/>
+                                    <constraint firstItem="YGe-ku-CDj" firstAttribute="top" secondItem="phy-AZ-ePv" secondAttribute="top" id="qox-Zf-S5Y"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mnn-AH-fb0" firstAttribute="top" secondItem="phy-AZ-ePv" secondAttribute="bottom" id="H5F-yr-xpc"/>
+                            <constraint firstItem="phy-AZ-ePv" firstAttribute="top" secondItem="7gP-F6-LQH" secondAttribute="bottom" id="J7T-7O-4jw"/>
+                            <constraint firstItem="phy-AZ-ePv" firstAttribute="leading" secondItem="xm4-rh-J7L" secondAttribute="leading" id="Kjh-RW-SDd"/>
+                            <constraint firstAttribute="trailing" secondItem="phy-AZ-ePv" secondAttribute="trailing" id="cYs-kP-d3g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qsk-wy-7Wh"/>
+                    <connections>
+                        <outlet property="containerView" destination="6YE-AH-9Km" id="CaP-MU-Ze3"/>
+                        <outlet property="headerTextLabel" destination="6YV-ci-Ky0" id="WfE-Vr-KZL"/>
+                        <outlet property="headerTitleLabel" destination="b08-dd-nbt" id="8b7-s6-iBc"/>
+                        <outlet property="headerView" destination="YGe-ku-CDj" id="N0D-2t-0nN"/>
+                        <outlet property="segmentedControl" destination="vKy-R4-5pg" id="OQg-qF-yxB"/>
+                        <outlet property="segmentedControlView" destination="3LX-91-pyj" id="uM1-Gm-jW8"/>
+                        <outlet property="slideMenuView" destination="FB9-zu-erl" id="yil-3S-z6r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJT-6B-026" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="98.50074962518741"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kGk-id-oyZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DzO-P4-L1u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vqf-Tz-pCr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pPZ-YZ-D7b" kind="relationship" relationship="rootViewController" id="yWP-Ve-GbN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCb-eM-MfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="98.50074962518741"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hQ8-qY-mV1">
+            <objects>
+                <viewController id="tO9-hQ-CHD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J9N-pG-f8p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="403"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cnd-7Q-1Ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="786"/>
+        </scene>
+    </scenes>
+</document>
